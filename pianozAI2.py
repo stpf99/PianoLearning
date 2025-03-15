@@ -602,7 +602,7 @@ class PianoLearningApp(QMainWindow):
             self.note_events = sorted(self.note_events, key=lambda x: x["time"])
             self.max_possible_score = len([e for e in self.note_events if e["type"] == "note_on"])
             self.note_canvas.set_note_events(self.note_events)
-            self.song_label.setText(f"Song: AI-Generated {style} by {artist} ({duration_seconds} min)")
+            self.song_label.setText(f"Song: AI-Generated {style} by {artist} ({duration_seconds} sec)")
             self.midi_file = None  # Reset midi_file, bo to nowa kompozycja
             self.play_button.setEnabled(True)
             self.preview_button.setEnabled(True)
